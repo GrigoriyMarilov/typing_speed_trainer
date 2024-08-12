@@ -13,7 +13,7 @@ interface TextBoxProps {
 export const TextBox = React.memo(({practice, addElementInWordList}: TextBoxProps) => {
     const userInput = usePracticeStore(state => state.userText)
     const ref = useRef<HTMLDivElement>(null);
-    console.log(userInput)
+
 
     useEffect(() => {
         ref.current && ref.current.childNodes.forEach(el => {

@@ -21,9 +21,7 @@ const Timer = () => {
             clearInterval(interval)
         }
     }, [gameState, timer]);
-    useEffect(() => {
-        console.log(gameState)
-    }, [gameState]);
+
     return (
         <div className={'timer'}>
             {timer}
