@@ -1,0 +1,194 @@
+.typingSpeedTrainer {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  font-size: 2rem;
+
+  .hidden {
+    visibility: hidden;
+
+    #caret {
+      display: none;
+    }
+  }
+
+  .display-game {
+    position: relative;
+  }
+
+  button {
+    padding-inline: 0.5rem;
+    padding-block: 0.25rem;
+    border: none;
+    background: #646669;
+    //border-left: 5px solid #646669;
+    //border-right: 5px solid rgba(0,0,0,0);
+    outline: none;
+    font-size: inherit;
+    color: #2c2e31;
+
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+
+  }
+
+  button:hover {
+    background: #e2b714;
+    color: #2c2e31;
+  }
+
+  .restart-button {
+    margin-left: 0.5rem;
+  }
+
+  .restart-icon {
+    height: 3rem;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    fill: #646669;
+    transition: all 0.5s ease;
+  }
+
+  .restart-icon:hover {
+    fill: #e2b714;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes caretFlashSmooth {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#caret {
+  height: 1.2em;
+  width: 3px;
+  background: #e2b714;
+  position: absolute;
+  border-radius: 8px;
+  transform-origin: top left;
+  animation: caretFlashSmooth 1s infinite ease;
+
+}
+
+#typing-trainer-input {
+  position: absolute;
+  opacity: 0;
+  cursor: default;
+}
+
+.box {
+  width: 100%;
+  position: relative;
+  height: 4em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  pointer-events: none;
+  margin-bottom: 2rem;
+}
+
+.box::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes result {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.result {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: result 0.5s;
+  gap: 1rem;
+
+  .main_stats, .secondary_stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    div {
+
+      display: flex;
+      flex: 0 0 33%;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .result-buttons {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+  }
+
+
+}
+
+
+.practice-info {
+  padding-inline: 0.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  .practice-creation {
+    div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .typingSpeedTrainer {
+    font-size: 1rem;
+    .result .main_stats, .result .secondary_stats {
+        gap: 1rem;
+      }
+
+    .restart-icon {
+      height: 1.8rem;
+    }
+  }
+
+  .practice-info {
+
+    .practice-creation {
+      div h1 {
+        font-size: 2rem;
+      }
+
+    }
+  }
+
+
+}

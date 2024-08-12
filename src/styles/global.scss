@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body,#root{
+  height: 100%;
+  overflow: hidden;
+}
+#root{
+  display: flex;
+  flex-direction: column;
+}
+$main-color: #2c2e31;
+$alt-color: e2b714;
+$untyped-letter-color: #646669;
+$correct-letter-color: #d1d0c5;
+$error-color: #ca4754;
+body{
+  font-family: "Roboto Mono", monospace;
+  background: $main-color;
+  color: $untyped-letter-color
+}
+.alt-color{
+  color: #e2b714;
+}

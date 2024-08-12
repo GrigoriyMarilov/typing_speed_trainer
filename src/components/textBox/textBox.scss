@@ -1,0 +1,31 @@
+$correct-letter-color: #d1d0c5;
+$error-color: #ca4754;
+
+.text-box {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.word {
+  display: inline-block;
+  margin-inline: 0.25em;
+}
+
+.correct {
+  color: $correct-letter-color
+}
+
+.error {
+  color: $error-color
+}
+
+.test {
+  background: #e2b714;
+  width: 1em;
+  height: 1em;
+}
+
+.extra{
+  color: #7e2a33
+}

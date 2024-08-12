@@ -1,0 +1,13 @@
+main {
+  padding-top: 80px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    justify-content: flex-start;
+  }
+}
